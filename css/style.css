@@ -1,0 +1,38 @@
+:root {
+    --bg-white: #fff;
+    --bg-black: #000;   
+    --bg-gray: #f3f3f3;
+    
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--bg-gray);
+}
+
+.slider {
+    width: 375px;
+    height: 228px;
+    padding: 16px 0;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+}
+
+.slider-wrapper {
+    max-width: 375px;
+    display: flex;
+    overflow: hidden;
+}
+
+.slider-list {
+    display: flex;
+}
+
+.slide {
+    width: 326px;
+    height: 180px;
+    margin: 0 12px;
+    border-radius: 8px;
+    background-color: var(--bg-black);
+}
