@@ -25,14 +25,42 @@ body {
     overflow: hidden;
 }
 
-.slider-list {
+.slider-wrapper__list {
     display: flex;
+    transform: translateX(-320px);
+}
+
+.slider-indicators {
+    max-width: 100%;
+    display: flex;
+    padding: 16px;
+    margin-top: 8px;
+}
+
+.slider-indicators__list {
+    max-width: 40px;
+    min-width: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 
 .slide {
     width: 326px;
     height: 180px;
-    margin: 0 12px;
+    margin: 0 6px;
     border-radius: 8px;
+    background-color: var(--bg-black);
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--bg-gray);
+}
+
+.indicator--active {
     background-color: var(--bg-black);
 }
