@@ -1,66 +1,66 @@
 :root {
-    --bg-white: #fff;
-    --bg-black: #000;   
-    --bg-gray: #f3f3f3;
-    
+  --bg-white: #fff;
+  --bg-black: #000;
+  --bg-gray: #f3f3f3;
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
-    background-color: var(--bg-gray);
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--bg-gray);
 }
 
 .slider {
-    width: 375px;
-    height: 228px;
-    padding: 16px 0;
-    margin: 0 auto;
-    background-color: var(--bg-white);
+  width: 375px;
+  height: 228px;
+  padding: 16px 0;
+  margin: 0 auto;
+  background-color: var(--bg-white);
 }
 
 .slider-wrapper {
-    max-width: 375px;
-    display: flex;
-    overflow: hidden;
+  max-width: 375px;
+  display: flex;
+  overflow: hidden;
 }
 
 .slider-wrapper__list {
-    display: flex;
-    transform: translateX(-320px);
+  display: flex;
+  transition: 0.5s;
+  transform: translateX(0px);
 }
 
 .slider-indicators {
-    max-width: 100%;
-    display: flex;
-    padding: 16px;
-    margin-top: 8px;
+  max-width: 100%;
+  display: flex;
+  padding: 16px;
+  margin-top: 8px;
 }
 
 .slider-indicators__list {
-    max-width: 40px;
-    min-width: 40px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+  max-width: 40px;
+  min-width: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
 .slide {
-    width: 326px;
-    height: 180px;
-    margin: 0 6px;
-    border-radius: 8px;
-    background-color: var(--bg-black);
+  width: 326px;
+  height: 180px;
+  margin: 0 6px;
+  border-radius: 8px;
+  background-color: var(--bg-black);
 }
 
 .indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: var(--bg-gray);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--bg-gray);
 }
 
 .indicator--active {
-    background-color: var(--bg-black);
+  background-color: var(--bg-black);
 }
