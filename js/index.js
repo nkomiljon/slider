@@ -1,27 +1,40 @@
 import { move } from './interval.js';
+import { scroll } from './scroll.js';
 
-"use strict";
+("use strict");
 
 const wrapper = document.querySelector(".slider-wrapper");
-const indicatorsEl = document.querySelector(".indicators");
-const listsEl = document.querySelector(".list");
 
-let wrapperWidth = wrapper.clientWidth;
+const screen = document.querySelector(".screen");
+const slideEl = screen.querySelector(".slide");
+const listsEl = screen.querySelector(".list");
+
+const buttonEl = document.querySelector(".slider-controls > .left");
+const indicatorsEl = document.querySelector(".indicators");
+
+const slidesCount = listsEl.childElementCount;
+
+let wrapperWidth = screen.clientWidth;
 
 let slide = 0;
 let i = 0;
 const slideShow = () => {
   i++;
-  slide = slide < wrapperWidth ? (slide += 320) : 0;
+
+  slide = i !== slidesCount ? -1 * (wrapperWidth * i) : 0;
+  console.log(i);
   console.log(slide);
-  console.log(is(slide));
-  transform(-1 * slide);
+  transform(slide);
 };
 
 move(slideShow);
 
-const is = (slide, i) => {
-  return slide < -1 * wrapperWidth;
+const is = (i) => {
+  return slidesCount !== i;
+};
+
+const calculate = () => {
+  return ++wrapperWidth;
 };
 
 const transform = (slide) => {
@@ -35,6 +48,13 @@ const addClass = (slide, i) => {
 const removeClass = () => {
   indicatorsEl.children[i].classList.remove("indicator--active");
 };
+
+let width = 0;
+buttonEl.addEventListener("click", () => {
+  width += -1 * screen.clientWidth;
+  console.log(width);
+  transform(width);
+});
 
 /*
 const TIME = 1000;

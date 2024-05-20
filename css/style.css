@@ -11,20 +11,30 @@ body {
 }
 
 .slider {
-  width: 375px;
-  height: 228px;
-  padding: 16px 0;
+  width: 100%;
+  height: auto;
+  padding: 0px 0;
   margin: 0 auto;
   background-color: var(--bg-white);
 }
+.container {
+  padding: 20px 60px;
+}
 
 .slider-wrapper {
-  max-width: 375px;
+  width: 100%;
   display: flex;
   overflow: hidden;
 }
 
+.slider-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
 .slider-wrapper__list {
+  width: 100%;
   display: flex;
   transition: 0.5s;
   transform: translateX(0px);
@@ -46,9 +56,8 @@ body {
 }
 
 .slide {
-  width: 326px;
-  height: 180px;
-  margin: 0 6px;
+  width: auto;
+  height: 550px;
   border-radius: 8px;
   background-color: var(--bg-black);
 }
@@ -63,4 +72,29 @@ body {
 
 .indicator--active {
   background-color: var(--bg-black);
+}
+
+.flex-auto {
+  flex: auto;
+}
+
+.flex-w-full {
+  flex: 1 0 100%;
+}
+
+.control-button {
+  padding: 8px;
+  display: flex;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.364);
+}
+
+.control-button--disabled > svg > path {
+  fill: #6c7275;
+}
+
+img {
+  width: 100%;
+  display: block;
 }

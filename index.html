@@ -8,18 +8,56 @@
   </head>
   <body>
     <div class="slider">
-      <div class="slider-wrapper">
-        <div class="list slider-wrapper__list">
-          <div class="slide"></div>
-          <div class="slide"></div>
-          <div class="slide"></div>
+      <div class="container">
+        <div class="slider-controls">
+          <div class="control-button control-button--disabled" role="button">
+            <!-- <img src="./images/left.svg" alt="left" /> -->
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.90906 7.76521C9.50324 7.3906 8.87058 7.4159 8.49597 7.82172L5.2652 11.3217C4.9116 11.7047 4.9116 12.2952 5.26519 12.6782L8.49597 16.1783C8.87057 16.5841 9.50323 16.6094 9.90905 16.2348C10.3149 15.8602 10.3402 15.2276 9.96558 14.8217L8.28397 13L18 13C18.5523 13 19 12.5523 19 12C19 11.4477 18.5523 11 18 11L8.284 11L9.96557 9.17829C10.3402 8.77247 10.3149 8.13981 9.90906 7.76521Z"
+                fill="#23262F"
+              />
+            </svg>
+          </div>
+          <div class="control-button left" role="button">
+            <!-- <img src="./images/right.svg" alt="right" /> -->
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M14.0909 7.76521C14.4968 7.3906 15.1294 7.4159 15.504 7.82172L18.7348 11.3217C19.0884 11.7047 19.0884 12.2952 18.7348 12.6782L15.504 16.1783C15.1294 16.5841 14.4968 16.6094 14.091 16.2348C13.6851 15.8602 13.6598 15.2276 14.0344 14.8217L15.716 13L6 13C5.44771 13 5 12.5523 5 12C5 11.4477 5.44771 11 6 11L15.716 11L14.0344 9.17829C13.6598 8.77247 13.6851 8.13981 14.0909 7.76521Z"
+                fill="#23262F"
+              />
+            </svg>
+          </div>
         </div>
-      </div>
-      <div class="slider-indicators">
-        <div class="indicators slider-indicators__list">
-          <div class="indicator" role="button"></div>
-          <div class="indicator indicator--active" role="button"></div>
-          <div class="indicator" role="button"></div>
+        <div class="slider-wrapper screen">
+          <div class="list slider-wrapper__list">
+            <div class="slide flex-w-full"></div>
+            <div class="slide flex-w-full"></div>
+            <div class="slide flex-w-full"></div>
+          </div>
+        </div>
+        <div class="slider-indicators">
+          <div class="indicators slider-indicators__list">
+            <div class="indicator indicator--active" role="button"></div>
+            <div class="indicator" role="button"></div>
+            <div class="indicator" role="button"></div>
+          </div>
         </div>
       </div>
     </div>
